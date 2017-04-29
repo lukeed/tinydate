@@ -1,10 +1,11 @@
 'use strict';
-module.exports = (input, opts) => {
-	if (typeof input !== 'string') {
-		throw new TypeError(`Expected a string, got ${typeof input}`);
+
+const RGX = /([YMDHms]{2,4})(:\/)?/g;
+
+export default function (pattern) {
+	if (typeof pattern !== 'string') {
+		throw new TypeError(`Expected a string, got ${typeof pattern}`);
 	}
 
-	opts = opts || {};
-
-	return input + ' & ' + (opts.postfix || 'rainbows');
-};
+	return pattern + ' & rainbows';
+}
