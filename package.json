@@ -17,6 +17,7 @@
   "scripts": {
     "bench": "node bench",
     "build": "node builder",
+    "pretest": "npm run build",
     "test": "tape test/*.js | tap-spec"
   },
   "files": [
