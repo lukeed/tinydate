@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "time-stamp": "^1.0.1",
+    "tinytime": "^0.2.5"
+  },
+  "dependencies": {
+    "cli-table2": "^0.2.0"
+  }
+}
