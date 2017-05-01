@@ -2,7 +2,7 @@ var RGX = /([^{]*?)\w(?=\})/g;
 
 var dict = {
 	YYYY: 'getFullYear',
-	YY: 'getFullYear',
+	YY: 'getYear',
 	MM: 'getMonth',
 	DD: 'getDate',
 	HH: 'getHours',
