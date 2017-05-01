@@ -3,12 +3,13 @@ var RGX = /([^{]*?)\w(?=\})/g;
 var dict = {
 	YYYY: 'getFullYear',
 	YY: 'getYear',
-	MM: 'getMonth',
+	MM: function (d) {
+		return d.getMonth() + 1;
+	},
 	DD: 'getDate',
 	HH: 'getHours',
 	mm: 'getMinutes',
-	ss: 'getSeconds',
-	ms: 'getMilliseconds'
+	ss: 'getSeconds'
 };
 
 export default function (str) {
@@ -18,7 +19,9 @@ export default function (str) {
 		parts.push(str.substring(offset, idx - 1));
 		offset = idx += key.length + 1;
 		// save function
-		parts.push(function(d){return d[dict[key]]()});
+		parts.push(function(d){
+			return ('00' + (typeof dict[key]==='string' ? d[dict[key]]() : dict[key](d))).slice(-key.length);
+		});
 	});
 
 	if (offset !== str.length) {
