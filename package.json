@@ -16,8 +16,8 @@
   },
   "scripts": {
     "bench": "node bench",
-    "build": "rollup --config",
-    "test": "xo && tape test/*.js | tap-spec"
+    "build": "node builder",
+    "test": "tape test/*.js | tap-spec"
   },
   "files": [
     "dist"
@@ -28,6 +28,7 @@
   "dependencies": {},
   "devDependencies": {
     "tap-spec": "^4.1.1",
-    "tape": "^4.6.3"
+    "tape": "^4.6.3",
+    "uglify-js": "^2.8.22"
   }
 }

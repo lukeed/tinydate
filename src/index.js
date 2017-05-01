@@ -11,7 +11,7 @@ var dict = {
 	ms: 'getMilliseconds'
 };
 
-module.exports = function (str) {
+export default function (str) {
 	var parts=[], offset=0;
 	str.replace(RGX, function (key, _, idx) {
 		// save preceding string
