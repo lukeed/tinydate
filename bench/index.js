@@ -1,22 +1,24 @@
 const Table = require('cli-table2');
 const { Suite } = require('benchmark');
-const func = require('../dist/tinydate');
 
 const date = new Date();
 const template = '[HH:mm:ss]';
 const bench = new Suite();
 
-// const tinydate = func(template);
 const timestamp = require('time-stamp');
 const tinytime = require('tinytime')(template);
-
-const tinydate = d => '[' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds() + ']';
+const inline = require('./test-inline')(template);
+const tinydate = require('../dist/tinydate')(template);
+const cheat1 = require('./cheat-string');
+const cheat2 = require('./cheat-array');
 
 bench
-  // .add('tinydate', () => tinydate.render(date))
   .add('tinydate', () => tinydate(date))
-  .add('time-stamp', () => timestamp(template, date))
   .add('tinytime', () => tinytime.render(date))
+  .add('time-stamp', () => timestamp(template, date))
+  .add('cheat-string', () => cheat1(date))
+  .add('cheat-array', () => cheat2(date))
+  .add('test-inline', () => inline.stamp(date))
   .on('cycle', e => console.log(String(e.target)))
   .on('complete', function() {
     console.log('Fastest is ' + this.filter('fastest').map('name'));
@@ -34,7 +36,7 @@ bench
         diff = 'N/A'
       }
       prev = el.hz;
-      tbl.push([el.name, el.stats.mean, el.hz, diff])
+      tbl.push([el.name, el.stats.mean, el.hz.toLocaleString(), diff])
     });
     console.log(tbl.toString());
   })
