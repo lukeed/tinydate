@@ -1,6 +1,6 @@
 {
   "name": "tinydate",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A tiny (337B) reusable date formatter. Extremely fast!",
   "repository": "lukeed/tinydate",
   "module": "dist/tinydate.es.js",
