@@ -25,7 +25,13 @@
     "dist"
   ],
   "keywords": [
-    ""
+    "date",
+    "datestamp",
+    "format",
+    "stamp",
+    "time",
+    "timestamp",
+    "time-stamp"
   ],
   "dependencies": {},
   "devDependencies": {
