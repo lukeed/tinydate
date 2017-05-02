@@ -2,6 +2,8 @@
 
 > A tiny (337B) reusable date formatter. Extremely fast!
 
+[Demo](https://jsfiddle.net/lukeed/aoy0xeze/)
+
 Inspired by [`tinytime`](tinytime), this module returns a "render" function that efficiently re-render your deconstructed template. This allows for [incredibly performant](#benchmarks) results!
 
 However, please notice that this only provides a [limited subset of Date methods](#patterns). If you need more, [`tinytime`](tinytime) or [`date-fns`](https://github.com/date-fns/date-fns) are great alternatives!
