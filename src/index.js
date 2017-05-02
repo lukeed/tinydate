@@ -29,9 +29,9 @@ export default function (str) {
 	}
 
 	return function (arg) {
-		var out='', i=0;
+		var out='', i=0, d=arg||new Date();
 		for (; i<parts.length; i++) {
-			out += (typeof parts[i]==='string') ? parts[i] : parts[i](arg);
+			out += (typeof parts[i]==='string') ? parts[i] : parts[i](d);
 		}
 		return out;
 	};
