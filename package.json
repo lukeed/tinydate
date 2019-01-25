@@ -1,9 +1,10 @@
 {
   "name": "tinydate",
   "version": "1.0.0",
-  "description": "A tiny (337B) reusable date formatter. Extremely fast!",
   "repository": "lukeed/tinydate",
-  "module": "dist/tinydate.es.js",
+  "description": "A tiny (337B) reusable date formatter. Extremely fast!",
+  "unpkg": "dist/tinydate.min.js",
+  "module": "dist/tinydate.mjs",
   "main": "dist/tinydate.js",
   "license": "MIT",
   "author": {
@@ -15,8 +16,8 @@
     "node": ">=4"
   },
   "scripts": {
+    "build": "bundt",
     "bench": "node bench",
-    "build": "node builder",
     "prebench": "npm run build",
     "pretest": "npm run build",
     "test": "tape test/*.js | tap-spec"
@@ -33,12 +34,9 @@
     "timestamp",
     "time-stamp"
   ],
-  "dependencies": {},
   "devDependencies": {
-    "gzip-size": "^3.0.0",
-    "pretty-bytes": "^4.0.2",
+    "bundt": "^0.2.0",
     "tap-spec": "^4.1.1",
-    "tape": "^4.6.3",
-    "uglify-js": "^2.8.22"
+    "tape": "^4.6.3"
   }
 }

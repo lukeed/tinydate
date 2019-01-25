@@ -19,7 +19,7 @@ export default function (str) {
 		parts.push(str.substring(offset, idx - 1));
 		offset = idx += key.length + 1;
 		// save function
-		parts.push(function(d){
+		parts.push(function (d) {
 			return ('00' + (typeof dict[key]==='string' ? d[dict[key]]() : dict[key](d))).slice(-key.length);
 		});
 	});
