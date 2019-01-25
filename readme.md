@@ -1,6 +1,6 @@
 # tinydate [![Build Status](https://travis-ci.org/lukeed/tinydate.svg?branch=master)](https://travis-ci.org/lukeed/tinydate)
 
-> A tiny (337B) reusable date formatter. Extremely fast!
+> A tiny (332B) reusable date formatter. Extremely fast!
 
 [Demo](https://jsfiddle.net/lukeed/aoy0xeze/)
 

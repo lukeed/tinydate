@@ -2,7 +2,7 @@
   "name": "tinydate",
   "version": "1.0.0",
   "repository": "lukeed/tinydate",
-  "description": "A tiny (337B) reusable date formatter. Extremely fast!",
+  "description": "A tiny (332B) reusable date formatter. Extremely fast!",
   "unpkg": "dist/tinydate.min.js",
   "module": "dist/tinydate.mjs",
   "main": "dist/tinydate.js",
