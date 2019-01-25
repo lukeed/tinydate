@@ -62,12 +62,11 @@ The date from which to retrieve values. Defaults to current datetime.
 ## Benchmarks
 
 ```
-tinydate
-  --> 72,236,210 ops/sec ±0.89% (91 runs sampled)
-tinytime
-  --> 27,530,608 ops/sec ±0.92% (93 runs sampled)
-time-stamp
-  --> 569,692 ops/sec ±0.80% (90 runs sampled)
+# Node v10.13.0
+
+tinydate    x 160,834,214 ops/sec ±0.21% (96 runs sampled)
+tinytime    x  44,602,162 ops/sec ±0.34% (97 runs sampled)
+time-stamp  x     888,153 ops/sec ±1.27% (86 runs sampled)
 ```
 
 ## License
