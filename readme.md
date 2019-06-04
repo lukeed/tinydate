@@ -1,4 +1,4 @@
-# tinydate [![Build Status](https://travis-ci.org/lukeed/tinydate.svg?branch=master)](https://travis-ci.org/lukeed/tinydate)
+# tinydate [![Build Status](https://badgen.now.sh/travis/lukeed/tinydate)](https://travis-ci.org/lukeed/tinydate)
 
 > A tiny (340B) reusable date formatter. Extremely fast!
 
@@ -6,7 +6,8 @@
 
 Inspired by [`tinytime`][tinytime], this module returns a "render" function that efficiently re-render your deconstructed template. This allows for [incredibly performant](#benchmarks) results!
 
-However, please notice that this only provides a [limited subset of Date methods](#patterns). If you need more, [`tinytime`][tinytime] or [`date-fns`](https://github.com/date-fns/date-fns) are great alternatives!
+However, please notice that this only provides a [limited subset of Date methods](#patterns).<br>
+If you need more, [`tinytime`][tinytime] or [`date-fns`](https://github.com/date-fns/date-fns) are great alternatives!
 
 ## Install
 
@@ -57,6 +58,7 @@ The date from which to retrieve values. Defaults to current datetime.
 - `{HH}`: hours; eg: **06** (24h)
 - `{mm}`: minutes; eg: **59**
 - `{ss}`: seconds; eg: **09**
+- `{fff}`: milliseconds; eg: **555**
 
 
 ## Benchmarks
