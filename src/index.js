@@ -9,7 +9,8 @@ var dict = {
 	DD: 'getDate',
 	HH: 'getHours',
 	mm: 'getMinutes',
-	ss: 'getSeconds'
+	ss: 'getSeconds',
+	fff: 'getMilliseconds'
 };
 
 export default function (str) {
