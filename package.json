@@ -35,8 +35,8 @@
     "time-stamp"
   ],
   "devDependencies": {
-    "bundt": "^0.4.0",
-    "tap-spec": "^4.1.1",
-    "tape": "^4.6.3"
+    "bundt": "0.4.0",
+    "tap-spec": "5.0.0",
+    "tape": "4.11.0"
   }
 }
