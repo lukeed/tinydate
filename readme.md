@@ -34,20 +34,46 @@ stamp();
 
 ## API
 
-### tinydate(pattern)(date)
+### tinydate(pattern, dict?)(date?)
+Returns: `Function`
+
+Returns a rendering function that will optionally accept a [`date`](#date) value as its only argument.
 
 #### pattern
-
-Type: `string`
+Type: `String`<br>
+Required: `true`
 
 The template pattern to be parsed.
 
-#### date
+#### dict
+Type: `Object`<br>
+Required: `false`
 
+A custom dictionary of template patterns. You may override [existing patterns](#patterns) or declare new ones.
+
+> **Important:** All dictionary items **must be a function** and must control its own formatting.<br>For example, when defining your own `{ss}` template, `tinydate` **will not** pad its value to two digits.
+
+```js
+const today = new Date('2019-07-04, 5:30:00 PM');
+
+// Example custom dictionary:
+//   - Adds {MMMM}
+//   - Overrides {DD}
+const stamp = tinydate('Today is: {MMMM} {DD}, {YYYY}', {
+	MMMM: d => d.toLocaleString('default', { month: 'long' }),
+	DD: d => d.getDate()
+});
+
+stamp(today);
+//=> 'Today is: July 4, 2019'
+```
+
+#### date
 Type: `Date`<br>
 Default: `new Date()`
 
-The date from which to retrieve values. Defaults to current datetime.
+The date from which to retrieve values. Defaults to current datetime if no value is provided.
+
 
 ## Patterns
 

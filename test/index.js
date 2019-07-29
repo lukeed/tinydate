@@ -35,3 +35,29 @@ test('rendering', t => {
 
 	t.end();
 });
+
+test('customize', t => {
+	t.plan(5);
+
+	const tmpl = '{MMMM} {DD}, {YYYY}';
+
+	const stamp = fn(tmpl, {
+		// new key
+		MMMM: d => d.toLocaleString('default', { month: 'long' }),
+		// override key
+		DD: d => d.getDate()
+	});
+
+	t.is(typeof stamp, 'function', 'returns a function');
+	t.is(stamp(foo), 'May 1, 2017', 'returns formatted string w/ customized keys');
+
+	// instance w/o customized dictionary (DD should be 01 not 1)
+	t.is(render('{DD}'), '01', '~> does not leak {DD} customization into other instances');
+
+	try {
+		render(tmpl);
+	} catch (err) {
+		t.true(err instanceof TypeError, '~> throws TypeError w/ undefined {MMMM} format');
+		t.is(err.message, 'MAP[key] is not a function', '~> says {MMMM} is not a function');
+	}
+});

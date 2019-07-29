@@ -1,6 +1,6 @@
 var RGX = /([^{]*?)\w(?=\})/g;
 
-var dict = {
+var MAP = {
 	YYYY: 'getFullYear',
 	YY: 'getYear',
 	MM: function (d) {
@@ -13,15 +13,16 @@ var dict = {
 	fff: 'getMilliseconds'
 };
 
-export default function (str) {
+export default function (str, custom) {
 	var parts=[], offset=0;
+
 	str.replace(RGX, function (key, _, idx) {
 		// save preceding string
 		parts.push(str.substring(offset, idx - 1));
 		offset = idx += key.length + 1;
 		// save function
-		parts.push(function (d) {
-			return ('00' + (typeof dict[key]==='string' ? d[dict[key]]() : dict[key](d))).slice(-key.length);
+		parts.push(custom && custom[key] || function (d) {
+			return ('00' + (typeof MAP[key] === 'string' ? d[MAP[key]]() : MAP[key](d))).slice(-key.length);
 		});
 	});
 
