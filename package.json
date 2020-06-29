@@ -10,7 +10,7 @@
   "author": {
     "name": "Luke Edwards",
     "email": "luke.edwards05@gmail.com",
-    "url": "lukeed.com"
+    "url": "https://lukeed.com"
   },
   "engines": {
     "node": ">=4"

@@ -1,4 +1,4 @@
-# tinydate [![Build Status](https://badgen.now.sh/travis/lukeed/tinydate)](https://travis-ci.org/lukeed/tinydate)
+# tinydate ![CI](https://github.com/lukeed/tinydate/workflows/CI/badge.svg)
 
 > A tiny (349B) reusable date formatter. Extremely fast!
 
