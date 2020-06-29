@@ -43,7 +43,7 @@ test('customize', t => {
 
 	const stamp = fn(tmpl, {
 		// new key
-		MMMM: d => d.toLocaleString('default', { month: 'long' }),
+		MMMM: d => d.toLocaleString('en', { month: 'long' }),
 		// override key
 		DD: d => d.getDate()
 	});
