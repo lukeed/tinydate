@@ -6,6 +6,7 @@
   "unpkg": "dist/tinydate.min.js",
   "module": "dist/tinydate.mjs",
   "main": "dist/tinydate.js",
+  "types": "index.d.ts",
   "license": "MIT",
   "author": {
     "name": "Luke Edwards",
@@ -23,7 +24,8 @@
     "test": "tape test/*.js | tap-spec"
   },
   "files": [
-    "dist"
+    "dist",
+    "*.d.ts"
   ],
   "keywords": [
     "date",
