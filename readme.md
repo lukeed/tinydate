@@ -1,4 +1,4 @@
-# tinydate ![CI](https://github.com/lukeed/tinydate/workflows/CI/badge.svg)
+# tinydate ![CI](https://github.com/lukeed/tinydate/workflows/CI/badge.svg) [![licenses](https://licenses.dev/b/npm/tinydate)](https://licenses.dev/npm/tinydate) [![downloads](https://badgen.now.sh/npm/dm/tinydate)](https://npmjs.org/package/tinydate)
 
 > A tiny (349B) reusable date formatter. Extremely fast!
 
