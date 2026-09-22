@@ -60,7 +60,7 @@ const today = new Date('2019-07-04, 5:30:00 PM');
 //   - Adds {MMMM}
 //   - Overrides {DD}
 const stamp = tinydate('Today is: {MMMM} {DD}, {YYYY}', {
-	MMMM: d => d.toLocaleString('default', { month: 'long' }),
+	MMMM: d => d.toLocaleString('en-US', { month: 'long' }),
 	DD: d => d.getDate()
 });
 
