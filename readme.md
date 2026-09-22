@@ -20,7 +20,7 @@ $ npm install --save tinydate
 
 ```js
 const tinydate = require('tinydate');
-const fooDate = new Date(2017, 4, 1, 16, 30, 9);
+const fooDate = new Date('5/1/2017, 4:30:09 PM');
 
 const stamp = tinydate('Current time: [{HH}:{mm}:{ss}]');
 
@@ -54,7 +54,7 @@ A custom dictionary of template patterns. You may override [existing patterns](#
 > **Important:** All dictionary items **must be a function** and must control its own formatting.<br>For example, when defining your own `{ss}` template, `tinydate` **will not** pad its value to two digits.
 
 ```js
-const today = new Date(2019, 6, 4, 17, 30);
+const today = new Date('2019-07-04, 5:30:00 PM');
 
 // Example custom dictionary:
 //   - Adds {MMMM}
