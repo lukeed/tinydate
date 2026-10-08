@@ -22,7 +22,7 @@ export default function (str, custom) {
 		offset = idx += key.length + 1;
 		// save function
 		parts.push(custom && custom[key] || function (d) {
-			return ('00' + (typeof MAP[key] === 'string' ? d[MAP[key]]() : MAP[key](d))).slice(-key.length);
+			return ('000' + (typeof MAP[key] === 'string' ? d[MAP[key]]() : MAP[key](d))).slice(-key.length);
 		});
 	});
 
