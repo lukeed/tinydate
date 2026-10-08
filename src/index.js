@@ -2,7 +2,7 @@ var RGX = /([^{]*?)\w(?=\})/g;
 
 var MAP = {
 	YYYY: 'getFullYear',
-	YY: 'getYear',
+	YY: 'getFullYear',
 	MM: function (d) {
 		return d.getMonth() + 1;
 	},
